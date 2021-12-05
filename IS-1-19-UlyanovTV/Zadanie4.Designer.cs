@@ -1,6 +1,6 @@
 ﻿namespace IS_1_19_UlyanovTV
 {
-    partial class Zadanie3
+    partial class Zadanie4
     {
         /// <summary>
         /// Required designer variable.
@@ -37,19 +37,19 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(366, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(358, 426);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
-            // Zadanie3
+            // Zadanie4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 450);
+            this.ClientSize = new System.Drawing.Size(388, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Zadanie3";
-            this.Text = "Zadanie3";
-            this.Load += new System.EventHandler(this.Zadanie3_Load);
+            this.Name = "Zadanie4";
+            this.Text = "Zadanie4";
+            this.Load += new System.EventHandler(this.Zadanie4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

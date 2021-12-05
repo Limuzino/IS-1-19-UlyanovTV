@@ -2,24 +2,25 @@
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using ConnectDB;
 
 namespace IS_1_19_UlyanovTV
 {
-    public partial class Zadanie3 : Form
+    public partial class Zadanie4 : Form
     {
-        public Zadanie3()
+        public Zadanie4()
         {
             InitializeComponent();
         }
 
-        private void Zadanie3_Load(object sender, EventArgs e)
+        private void Zadanie4_Load(object sender, EventArgs e)
         {
             //создаём экземпляр класса
-            ConnectDB ConnDb = new ConnectDB();
+            ConnectDB1 ConnDb1 = new ConnectDB1();
             //создаём экзепляр класса MySqlConnection и присваиваем ему значение которое возвращает метод Initialization
-            MySqlConnection connDb = new MySqlConnection(ConnDb.conn);
+            MySqlConnection connDb = new MySqlConnection(ConnDb1.conn1);
             //объявляем переменную запроса к БД
-            string zapros = "SELECT id, fio, theme_kurs FROM t_stud";
+            string zapros = "SELECT idStud, fioStud, drStud FROM t_datatime";
             try
             {
                 connDb.Open();
@@ -52,13 +53,17 @@ namespace IS_1_19_UlyanovTV
                 dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
                 dataGridView1.CurrentRow.Selected = true;
 
-                string index;
-                string id = "0";
+                string index1;
+                string id1 = "0";
 
-                index = dataGridView1.SelectedCells[0].RowIndex.ToString();
-                id = dataGridView1.Rows[Convert.ToInt32(index)].Cells[1].Value.ToString();
-                MessageBox.Show(id);
+                index1 = dataGridView1.SelectedCells[0].RowIndex.ToString();
+                id1 = dataGridView1.Rows[Convert.ToInt32(index1)].Cells[1].Value.ToString();
+                DateTime x = DateTime.Today;
+                DateTime y = Convert.ToDateTime(dataGridView1.Rows[Convert.ToInt32(index1)].Cells[2].Value.ToString());
+                string result = (x-y).ToString();
+                MessageBox.Show("Со дня рождения прошло " + result.Substring(0, result.Length - 9) + "дней");
             }
+
         }
     }
 }
