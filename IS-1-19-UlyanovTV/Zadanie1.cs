@@ -131,13 +131,78 @@ namespace IS_1_19_UlyanovTV
         //Приводим в исполнение через кнопки
         private void button1_Click(object sender, EventArgs e)
         {
+            //перестраховка от глупого человека
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Цена");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Год выпуска");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox9.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Артикул");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox3.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Частота");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox4.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Ядер ЦП");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox5.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Потоков ЦП");
+                return;
+            }
             cp = new CP(textBox1.Text, textBox2.Text, textBox9.Text, textBox3.Text, textBox4.Text, textBox5.Text);
             cp.Display(listBox1);
+            
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            //перестраховка от глупого человека
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Цена");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Год выпуска");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox9.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Артикул");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox3.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Частота");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox7.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Производительности видеокарты");
+                return;
+            }
+            else if (String.IsNullOrEmpty(textBox8.Text))
+            {
+                MessageBox.Show("Вы не заполнили строку Объёма памяти видеокарты");
+                return;
+            }
             vc = new VideoCard(textBox1.Text, textBox2.Text, textBox9.Text, textBox3.Text, textBox7.Text, textBox8.Text);
             vc.Display(listBox1);
+            
         }
+
     }
 }
