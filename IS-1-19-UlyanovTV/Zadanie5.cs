@@ -21,6 +21,8 @@ namespace IS_1_19_UlyanovTV
             MySqlConnection connDb = new MySqlConnection(ConnDb1.Initialization1());
             string fioStud = textBox1.Text;
             string datetime = textBox2.Text;
+            string datetimeStud = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+            MessageBox.Show(datetimeStud);
             string zapros = $"INSERT INTO t_PraktStud (fioStud, datetimeStud) VALUES ('{fioStud}','{datetime}');";
             int x = 0;
             try
