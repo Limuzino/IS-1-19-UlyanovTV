@@ -16,5 +16,11 @@ namespace IS_1_19_UlyanovTV
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Zadanie1 Z1 = new Zadanie1();
+            Z1.ShowDialog();
+        }
     }
 }
