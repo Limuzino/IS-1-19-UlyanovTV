@@ -18,9 +18,9 @@ namespace IS_1_19_UlyanovTV
             //создаём экземпляр класса
             ConnectDB1 ConnDb1 = new ConnectDB1();
             //создаём экзепляр класса MySqlConnection и присваиваем ему значение которое возвращает метод Initialization
-            MySqlConnection connDb = new MySqlConnection(ConnDb1.conn1);
+            MySqlConnection connDb = new MySqlConnection(ConnDb1.Initialization1());
             //объявляем переменную запроса к БД
-            string zapros = "SELECT idStud, fioStud, drStud FROM t_datatime";
+            string zapros = "SELECT idStud, fioStud, drStud FROM t_datetime";
             try
             {
                 connDb.Open();
@@ -61,7 +61,7 @@ namespace IS_1_19_UlyanovTV
                 DateTime x = DateTime.Today;
                 DateTime y = Convert.ToDateTime(dataGridView1.Rows[Convert.ToInt32(index1)].Cells[2].Value.ToString());
                 string result = (x-y).ToString();
-                MessageBox.Show("Со дня рождения прошло " + result.Substring(0, result.Length - 9) + "дней");
+                MessageBox.Show("Со дня рождения прошло " + result.Substring(0, result.Length - 9) + " дня(-ей)");
             }
 
         }

@@ -17,7 +17,7 @@ namespace IS_1_19_UlyanovTV
             //создаём экземпляр класса
             ConnectDB ConnDb = new ConnectDB();
             //создаём экзепляр класса MySqlConnection и присваиваем ему значение которое возвращает метод Initialization
-            MySqlConnection connDb = new MySqlConnection(ConnDb.conn);
+            MySqlConnection connDb = new MySqlConnection(ConnDb.Initialization());
             //объявляем переменную запроса к БД
             string zapros = "SELECT id, fio, theme_kurs FROM t_stud";
             try
