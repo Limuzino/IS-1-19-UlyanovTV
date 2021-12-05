@@ -28,5 +28,11 @@ namespace IS_1_19_UlyanovTV
             Zadanie2 Z2 = new Zadanie2();
             Z2.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Zadanie3 Z3 = new Zadanie3();
+            Z3.ShowDialog();
+        }
     }
 }
